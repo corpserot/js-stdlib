@@ -1,0 +1,65 @@
+{
+  "name": "@a.corp.serot/stdlib",
+  "version": "0.1.0",
+  "description": "My personal library for common/simple solutions built on top of standard JS library + types",
+  "author": "a.corp.serot",
+  "keywords": [],
+  "license": "0BSD",
+  "homepage": "https://github.com/corpserot/js-stdlib",
+  "bugs": "https://github.com/corpserot/js-stdlib/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corpserot/js-stdlib.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.js.map",
+    "dist/**/*.d.ts.map"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./*": {
+      "import": "./dist/*/index.js",
+      "types": "./dist/*/index.d.ts"
+    }
+  },
+  "imports": {
+    "#*/": "./dist/*/index.js",
+    "#*": "./dist/*.js"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "build": "tsc",
+    "build:check": "npm run lint && npm run test && npm run build",
+    "test": "node --import=tsx --test \"test/**/*.test.ts\"",
+    "test:watch": "node --watch --import=tsx --test \"test/**/*.test.ts\"",
+    "prepublishOnly": "npm run build:check"
+  },
+  "engines": {
+    "node": ">=24.20.0 <27.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.13.0",
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "eslint": "^10.9.1",
+    "globals": "^17.12.0",
+    "tsx": "^4.23.13",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "typescript-eslint": "^8.69.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
