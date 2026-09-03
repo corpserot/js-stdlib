@@ -1,7 +1,7 @@
 {
   "name": "@a.corp.serot/stdlib",
   "version": "0.1.0",
-  "description": "My personal library for common/simple solutions built on top of standard JS library + types",
+  "description": "My personal library for common/simple solutions built on top of standard JS built-ins + library",
   "author": "a.corp.serot",
   "keywords": [],
   "license": "0BSD",
