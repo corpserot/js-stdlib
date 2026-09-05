@@ -1,9 +1,6 @@
 {
   "exclude": [],
-  "include": [
-    "src/**/*.ts",
-    "test/**/*.ts"
-  ],
+  "include": ["src/**/*.ts", "test/**/*.ts"],
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     "noEmit": true,
@@ -43,6 +40,6 @@
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true,
+    "skipLibCheck": true
   }
 }

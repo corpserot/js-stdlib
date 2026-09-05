@@ -5,18 +5,11 @@ export default defineConfig({
     typeAware: true,
     typeCheck: true,
   },
-  ignorePatterns: [
-    'dist/**',
-  ],
+  ignorePatterns: ['dist/**'],
   env: {
     builtin: true,
   },
-  plugins: [
-    'promise',
-    'import',
-    'typescript',
-    'node',
-  ],
+  plugins: ['promise', 'import', 'typescript', 'node'],
   categories: {
     correctness: 'error',
     suspicious: 'error',
@@ -26,8 +19,8 @@ export default defineConfig({
     {
       files: ['test/**'],
       rules: {
-        "typescript/no-floating-promises": "off",
-      }
-    }
+        'typescript/no-floating-promises': 'off',
+      },
+    },
   ],
 });

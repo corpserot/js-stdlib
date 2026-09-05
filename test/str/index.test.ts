@@ -1,5 +1,5 @@
-import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
 
 import {
   reverse,
@@ -69,7 +69,8 @@ describe('str.reverse()', () => {
   });
 
   it('should be an involution for arbitrary inputs', () => {
-    for (const input of ['', 'a', 'abc', 'café', 'x𠮟y', 'a\uD800b', 'e\u0301']) {
+    const inputs = ['', 'a', 'abc', 'café', 'x𠮟y', 'a\uD800b', 'e\u0301'];
+    for (const input of inputs) {
       assert.equal(reverse(reverse(input)), input);
     }
   });
