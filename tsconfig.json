@@ -1,10 +1,15 @@
 {
   "exclude": [],
-  "include": [ "src/**/*.ts" ],
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ],
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
+    "noEmit": true,
+
     // File Layout
-    "rootDir": "./src",
+    "rootDir": "./",
     "outDir": "./dist",
 
     // Environment Settings
