@@ -15,6 +15,10 @@
     "target": "esnext",
     "lib": ["esnext"],
     "types": ["node"],
+    "resolvePackageJsonImports": false,
+    "paths": {
+      "#*": ["./src/*.ts"]
+    },
 
     // Other Outputs
     "sourceMap": true,
